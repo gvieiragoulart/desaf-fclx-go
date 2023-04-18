@@ -1,9 +1,5 @@
-FROM golang:1.16-alpine AS builder
+FROM scratch
 
-WORKDIR /app
+COPY desaf-fclx-go /main
 
-COPY . .
-
-RUN go build -o main .
-
-CMD ["./main"]
+CMD ["/main"]
